@@ -33,20 +33,22 @@ jobs:
           # 1. Prova a prendere l'URL dall'input manuale
           URL="${INPUT_URL}"
           
-          # 2. Se l'input è vuoto, prova a prendere la variabile globale (vars)
+          # 2. Se l'input è vuoto, usa la variabile di repository
           if [ -z "$URL" ]; then
             URL="${DEFAULT_URL}"
           fi
 
-          # 3. Se è ancora tutto vuoto, esce pulito senza errori (nessuna mail)
+          # 3. Se ancora vuoto, esce senza errori per evitare mail di fallimento
           if [ -z "$URL" -o "$URL" = "null" ]; then
-            echo "::notice:: Nessun URL M3U trovato nelle variabili o negli input. Operazione saltata con successo."
+            echo "::notice:: Nessun URL M3U trovato. Operazione saltata con successo."
             exit 0
           fi
 
-          # Se l'URL esiste, lo passa allo script Python tramite variabile d'ambiente
+          # Salva la variabile per il passaggio dell'Artifact
           echo "M3U_URL=$URL" >> $GITHUB_ENV
-          python convert.py
+
+          # Esegue lo script passando l'URL tramite il parametro --source
+          python convert.py --source "$URL"
 
       - name: Carica il file JSON (Artifact)
         if: env.M3U_URL != ''
