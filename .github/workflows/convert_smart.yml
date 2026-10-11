@@ -1,87 +1,56 @@
-name: Converti M3U in JSON (Smart & Auto)
+name: Converti M3U in Zappr (Auto & Manuale)
 
 on:
   workflow_dispatch:
     inputs:
       m3u_url:
-        description: "URL Playlist (lascia vuoto per usare quello salvato)"
+        description: "URL Playlist (lascia vuoto per usare il Secret)"
         required: false
         type: string
-      list_name:
-        description: "Nome Lista"
-        required: true
-        default: "La mia lista"
-        type: string
-      output_filename:
-        description: "Nome File Output"
-        required: true
-        default: "channels.json"
-        type: string
-  
+
   schedule:
     # Aggiornamento automatico ogni giorno alle 03:00 UTC
     - cron: '0 3 * * *'
 
-permissions:
-  contents: write
-
 jobs:
-  convert-and-save:
+  download-and-convert:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.x'
 
-      - name: Determina URL Sorgente
-        id: set_url
-        run: |
-          # 1. Prova a prendere l'input manuale
-          URL="${{ inputs.m3u_url }}"
-          
-          # 2. Se vuoto, prova la variabile salvata (per il cron o comodità)
-          if [ -z "$URL" ]; then
-            URL="${{ vars.DEFAULT_M3U_URL }}"
-          fi
-          
-          # 3. Se ancora vuoto, errore
-          if [ -z "$URL" ]; then
-            echo "::error::Nessun URL trovato. Inseriscilo manualmente o imposta la variabile DEFAULT_M3U_URL nelle Settings."
-            exit 1
-          fi
-          
-          echo "final_url=$URL" >> $GITHUB_OUTPUT
-          echo "::notice::URL selezionato: $URL"
-
-      - name: Converti Playlist
+      - name: Verifica URL ed Esegui Conversione
         env:
-          M3U_URL: ${{ steps.set_url.outputs.final_url }}
-          LIST_NAME: ${{ inputs.list_name || 'Lista Auto-Update' }}
-          OUTPUT_FILENAME: ${{ inputs.output_filename || 'channels.json' }}
+          INPUT_URL: ${{ inputs.m3u_url }}
+          SECRET_URL: ${{ secrets.M3U_URL }}
         run: |
-          PUBLISHER=$(echo "$M3U_URL" | sed -n 's|.*github\.com/\([^/]*\)/.*|\1|p')
-          if [ -z "$PUBLISHER" ]; then PUBLISHER="Sconosciuto"; fi
-          
-          mkdir -p output
-          python convert.py "$M3U_URL" \
-            -o "output/$OUTPUT_FILENAME" \
-            --name "$LIST_NAME" \
-            --publisher "$PUBLISHER" \
-            --publisher-link "" \
-            --epg ""
+          # Seleziona l'URL dall'input manuale o dal Secret
+          URL="${INPUT_URL}"
+          if [ -z "$URL" ]; then
+            URL="${SECRET_URL}"
+          fi
 
-      - name: Salva su GitHub (Commit)
-        env:
-          OUTPUT_FILENAME: ${{ inputs.output_filename || 'channels.json' }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "output/$OUTPUT_FILENAME"
+          # Se l'URL è ancora vuoto, esce pulito con codice 0 (Nessun errore, nessuna mail)
+          if [ -z "$URL" ]; then
+            echo "::notice:: Nessun URL M3U trovato nei Secrets o negli Input. Operazione saltata con successo."
+            exit 0
+          fi
+
+          # Se l'URL esiste, imposta la variabile ed esegui lo script Python
+          echo "M3U_URL=$URL" >> $GITHUB_ENV
+          python convert.py
+
+      - name: Carica il file JSON (Artifact)
+        if: env.M3U_URL != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: zappr-channels-json
+          path: channels.json
+          retention-days: 7
           
-          # Se il file non è cambiato, non fare nulla
-          git diff --cached --quiet && echo "Nessuna modifica rilevata, skip commit." && exit 0
-          
-          git commit -m "Auto-update: Sync channels.json"
-          git push
