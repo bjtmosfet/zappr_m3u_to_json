@@ -9,7 +9,7 @@
             "hd": true,
             "name": "Rai 1",
             "type": "hls",
-            "url": "https://dash2.antik.sk/live/test_rai_uno_tizen/playlist.m3u8"
+            "url": "https://raiuno3-live.akamaized.net/hls/live/2017910/raiuno3/raiuno3/playlist.m3u8"
         },
         {
             "lcn": 2,
@@ -123,7 +123,7 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/16-trmh24.png?raw=1",
             "name": "TRM H24",
             "type": "youtube",
-            "url": "-KnQ5OzFFSg"
+            "url": "88vVV1k84Qo"
         },
         {
             "lcn": 17,
@@ -144,7 +144,7 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/19-teledehon.png?raw=1",
             "name": "Tele Dehon",
             "type": "hls",
-            "url": "https://5f22d76e220e1.streamlock.net/rtmpteledehon/smil:rtmpteledehon.smil/chunklist_w1250153136_b3000000_slen.m3u8"
+            "url": "https://64b16f23efbee.streamlock.net/teledehonapp/ngrp:teledehonapp_all/playlist.m3u8"
         },
         {
             "lcn": 20,
@@ -192,9 +192,8 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/25-raipremiumhd.png?raw=1",
             "hd": true,
             "name": "Rai Premium",
-            "type": "hls",
-            "url": "http://raipremium3-live.akamaized.net/hls/live/2018013/raipremium3/raipremium3/playlist.m3u8",
-            "http": true
+            "type": "dash",
+            "url": "https://raipremium1-dash-live.akamaized.net/dash/live/663979/raipremium1/manifest.mpd"
         },
         {
             "lcn": 26,
@@ -332,8 +331,8 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/43-raiyoyohd.png?raw=1",
             "hd": true,
             "name": "Rai Yoyo",
-            "type": "hls",
-            "url": "https://raiyoyo3-live.akamaized.net/hls/live/2018014/raiyoyo3/raiyoyo3/playlist.m3u8"
+            "type": "dash",
+            "url": "https://raiyoyo1-dash-live.akamaized.net/dash/live/663949/raiyoyo1/manifest.mpd"
         },
         {
             "lcn": 44,
@@ -369,9 +368,8 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/48-rainews24hd.png?raw=1",
             "hd": true,
             "name": "Rai News 24",
-            "type": "hls",
-            "url": "http://91.146.94.234:10001/play/a135",
-            "http": true
+            "type": "dash",
+            "url": "https://rainews1-dash-live.akamaized.net/dash/live/663981/rainews1/manifest.mpd"
         },
         {
             "lcn": 49,
@@ -438,8 +436,8 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/57-raiscuolahd.png?raw=1",
             "hd": true,
             "name": "Rai Scuola",
-            "type": "hls",
-            "url": "https://d3k8wzt41aflvx.cloudfront.net/RAIScuola/Live.m3u8"
+            "type": "dash",
+            "url": "https://raiscuola1-dash-live.akamaized.net/dash/live/663975/raiscuola1/manifest.mpd"
         },
         {
             "lcn": 58,
@@ -568,8 +566,8 @@
             "lcn": 103,
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/103-radiotvseriea.png?raw=1",
             "name": "Radio TV Serie A",
-            "type": "hls",
-            "url": "https://livesg.seriea.hiway.media/restreamer/seriea_client/gpu-a-c0-8/restreamer/outgest/84d19a87-f82f-4aa2-80cd-2ab1105eac79/manifest.m3u8"
+            "type": "dash",
+            "url": "https://legaseriea-live-prd.cdn.netrw.it/@syna-token=st=1791652095~hmac=db842edcd57164438b4a30743a5870827a67d4dab2dbab62e45e5e3bd263005d/out/v1/s-prd/ch-01-prd-s-v2/dash-ch-01-prd-s-hd/index.mpd"
         },
         {
             "lcn": 158,
@@ -647,7 +645,7 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/403-bbctopgear.png?raw=1",
             "name": "BBC Top Gear Italy",
             "type": "hls",
-            "url": "https://amg00793-amg00793c43-rakuten-it-5537.playouts.now.amagi.tv/playlist1080P.m3u8"
+            "url": "https://tinyurl.com/xN1ckuzTopGear"
         },
         {
             "lcn": 404,
@@ -683,7 +681,7 @@
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/408-radiocarinatv.png?raw=1",
             "name": "Radio Carina TV",
             "type": "hls",
-            "url": "https://samson.streamerr.co:8081/carinatv/tracks-v1a1/playlist.m3u8"
+            "url": "https://57068da1deb21.streamlock.net/radiocarina/radiocarina/chunklist_w1834980759.m3u8"
         },
         {
             "lcn": 713,
