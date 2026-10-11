@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       m3u_url:
-        description: "URL Playlist (lascia vuoto per usare il Secret)"
+        description: "URL Playlist (lascia vuoto per usare la variabile salvata)"
         required: false
         type: string
 
@@ -28,21 +28,23 @@ jobs:
       - name: Verifica URL ed Esegui Conversione
         env:
           INPUT_URL: ${{ inputs.m3u_url }}
-          SECRET_URL: ${{ secrets.M3U_URL }}
+          DEFAULT_URL: ${{ vars.DEFAULT_M3U_URL }}
         run: |
-          # Seleziona l'URL dall'input manuale o dal Secret
+          # 1. Prova a prendere l'URL dall'input manuale
           URL="${INPUT_URL}"
+          
+          # 2. Se l'input è vuoto, prova a prendere la variabile globale (vars)
           if [ -z "$URL" ]; then
-            URL="${SECRET_URL}"
+            URL="${DEFAULT_URL}"
           fi
 
-          # Se l'URL è ancora vuoto, esce pulito con codice 0 (Nessun errore, nessuna mail)
-          if [ -z "$URL" ]; then
-            echo "::notice:: Nessun URL M3U trovato nei Secrets o negli Input. Operazione saltata con successo."
+          # 3. Se è ancora tutto vuoto, esce pulito senza errori (nessuna mail)
+          if [ -z "$URL" -o "$URL" = "null" ]; then
+            echo "::notice:: Nessun URL M3U trovato nelle variabili o negli input. Operazione saltata con successo."
             exit 0
           fi
 
-          # Se l'URL esiste, imposta la variabile ed esegui lo script Python
+          # Se l'URL esiste, lo passa allo script Python tramite variabile d'ambiente
           echo "M3U_URL=$URL" >> $GITHUB_ENV
           python convert.py
 
