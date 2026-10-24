@@ -5,24 +5,21 @@
     "channels": [
         {
             "lcn": 1,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/1-rai1hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/1-rai1.png?raw=1",
             "name": "Rai 1",
             "type": "hls",
             "url": "https://raiuno3-live.akamaized.net/hls/live/2017910/raiuno3/raiuno3/playlist.m3u8"
         },
         {
             "lcn": 2,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/2-rai2hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/2-rai2.png?raw=1",
             "name": "Rai 2",
             "type": "hls",
             "url": "https://raidue3-live.akamaized.net/hls/live/2017983/raidue3/raidue3/playlist.m3u8"
         },
         {
             "lcn": 3,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/3-rai3hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/3-rai3.png?raw=1",
             "name": "Rai 3",
             "type": "hls",
             "url": "https://raitre3-live.akamaized.net/hls/live/2018002/raitre3/raitre3/playlist.m3u8"
@@ -156,8 +153,7 @@
         },
         {
             "lcn": 21,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/21-rai4hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/21-rai4.png?raw=1",
             "name": "Rai 4",
             "type": "hls",
             "url": "https://raiquattro3-live.akamaized.net/hls/live/2018003/raiquattro3/raiquattro3/playlist.m3u8"
@@ -172,8 +168,7 @@
         },
         {
             "lcn": 23,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/23-rai5hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/23-rai5.png?raw=1",
             "name": "Rai 5",
             "type": "hls",
             "url": "http://raicinque3-live.akamaized.net/hls/live/2018007/raicinque3/raicinque3/playlist.m3u8",
@@ -181,16 +176,14 @@
         },
         {
             "lcn": 24,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/24-raimoviehd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/24-raimovie.png?raw=1",
             "name": "Rai Movie",
             "type": "hls",
             "url": "https://raimovie3-live.akamaized.net/hls/live/2018010/raimovie3/raimovie3/playlist.m3u8"
         },
         {
             "lcn": 25,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/25-raipremiumhd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/25-raipremium.png?raw=1",
             "name": "Rai Premium",
             "type": "dash",
             "url": "https://raipremium1-dash-live.akamaized.net/dash/live/663979/raipremium1/manifest.mpd"
@@ -320,16 +313,14 @@
         },
         {
             "lcn": 42,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/42-raigulphd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/42-raigulp.png?raw=1",
             "name": "Rai Gulp",
             "type": "hls",
             "url": "https://raigulp3-live.akamaized.net/hls/live/2018015/raigulp3/raigulp3/playlist.m3u8"
         },
         {
             "lcn": 43,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/43-raiyoyohd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/43-raiyoyo.png?raw=1",
             "name": "Rai Yoyo",
             "type": "dash",
             "url": "https://raiyoyo1-dash-live.akamaized.net/dash/live/663949/raiyoyo1/manifest.mpd"
@@ -365,8 +356,7 @@
         },
         {
             "lcn": 48,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/48-rainews24hd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/48-rainews24.png?raw=1",
             "name": "Rai News 24",
             "type": "dash",
             "url": "https://rainews1-dash-live.akamaized.net/dash/live/663981/rainews1/manifest.mpd"
@@ -434,15 +424,13 @@
         {
             "lcn": 57,
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/57-raiscuolahd.png?raw=1",
-            "hd": true,
-            "name": "Rai Scuola",
+            "name": "Italiana",
             "type": "dash",
             "url": "https://raiscuola1-dash-live.akamaized.net/dash/live/663975/raiscuola1/manifest.mpd"
         },
         {
             "lcn": 58,
-            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/58-raisporthd.png?raw=1",
-            "hd": true,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/58-raisport.png?raw=1",
             "name": "Rai Sport",
             "type": "hls",
             "url": "https://raisportuno3-live.akamaized.net/hls/live/2018008/raisportuno3/raisportuno3/playlist.m3u8"
@@ -589,6 +577,13 @@
             "name": "MAN-GA",
             "type": "dash",
             "url": "https://streamcdnr9-c65b9e710bde44819015af98e72cd7ab.msvdn.net/live/S93572876/aILSQPYFY3pF/manifest.mpd"
+        },
+        {
+            "lcn": 246,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/246-radio24.png?raw=1",
+            "name": "Radio 24 - IlSole24OreTV",
+            "type": "hls",
+            "url": "https://ilsole24ore-radiovisual.akamaized.net/hls/live/2035302/persidera/master.m3u8"
         },
         {
             "lcn": 257,
