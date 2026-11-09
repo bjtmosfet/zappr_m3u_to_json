@@ -536,6 +536,13 @@
             "url": "https://viamotionhsi.netplus.ch/live/eds/rsila2hd/browser-dash/rsila2hd.mpd"
         },
         {
+            "lcn": 73,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/73-lanuovatv.png?raw=1",
+            "name": "La Nuova TV",
+            "type": "hls",
+            "url": "https://5dcabf026b188.streamlock.net/lanuovatvbas/livestream/playlist.m3u8"
+        },
+        {
             "lcn": 101,
             "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/101-rai4K.png?raw=1",
             "name": "Rai 4K",
@@ -677,6 +684,48 @@
             "name": "Radio Carina TV",
             "type": "hls",
             "url": "https://57068da1deb21.streamlock.net/radiocarina/radiocarina/chunklist_w1834980759.m3u8"
+        },
+        {
+            "lcn": 409,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/409-horsetv.png?raw=1",
+            "name": "Horse TV",
+            "type": "hls",
+            "url": "https://a-cdn.klowdtv.com/live2/horsetv_720p/playlist.m3u8"
+        },
+        {
+            "lcn": 410,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/410-automoto.png?raw=1",
+            "name": "AutoMoto",
+            "type": "hls",
+            "url": "https://d2d70kuzq4qhmm.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-nwqkjgrx3umyk/17bac9a9-e349-47ea-bfa3-2444bf4776bf/0.m3u8"
+        },
+        {
+            "lcn": 411,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/411-motoretro.png?raw=1",
+            "name": "MotoRetrò",
+            "type": "hls",
+            "url": "https://d130mn8b66zi0y.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bqqljpzcglggs/de575183-fdb0-40b2-a28a-57394239e22c/0.m3u8"
+        },
+        {
+            "lcn": 412,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/412-rallytv.png?raw=1",
+            "name": "Rally.TV FAST+",
+            "type": "hls",
+            "url": "https://dv1e2nq0r4g7p.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n8rallqdrsy49/cd1d84f8-1ec7-4b5b-9573-1179500ce4fa/0.m3u8"
+        },
+        {
+            "lcn": 413,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/413-traceurban.png?raw=1",
+            "name": "Trace Urban",
+            "type": "hls",
+            "url": "https://smplu.link/traceurban"
+        },
+        {
+            "lcn": 414,
+            "logo": "https://raw.githubusercontent.com/xN1ckuz/OpenIPTVItaly/refs/heads/main/Logos/414-tracelatina.png?raw=1",
+            "name": "Trace Latina",
+            "type": "hls",
+            "url": "https://smplu.link/tracelatina"
         },
         {
             "lcn": 713,
